@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Gabriela Castillo</title>
-    <link rel="icon" href="c:\Users\Alumno Capouilliez\Documents\Castillo11F\recursos\img\Lcap.png">
+    <!-- Asegúrate de que la ruta sea relativa a donde guardas este archivo -->
+    <link rel="icon" href="recursos/img/Lcap.png">
     <style>
         html, body{
             height: 100%;
@@ -26,6 +27,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         footer{
             display: flex;
@@ -36,35 +39,34 @@
             background-color: beige;
         }
         h1 {
-            color: white; /* Color de la letra */
+            color: white; 
             text-shadow: 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 20px #bc13fe;
         }
         .logo-colegio {
-            transition: transform 0.3s ease; /* Hace que el movimiento sea suave */
+            transition: transform 0.3s ease;
         }
-
         .logo-colegio:hover {
-            transform: scale(1.2); /* Crece un 20% */
+            transform: scale(1.2);
         }
         .semana {
             background-color: white;
-            border-radius: 15px;      /* Bordes redondeados */
-            padding: 20px;            /* Espacio adentro de la tarjeta */
-            margin: 20px 0;           /* Espacio entre tarjetas */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra elegante */
-            border-left: 5px solid rgb(13, 0, 255); /* Una línea decorativa azul */
-            text-align: left;         /* Texto alineado a la izquierda */
+            border-radius: 15px;      
+            padding: 20px;            
+            margin: 20px 0;           
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            border-left: 5px solid rgb(13, 0, 255); 
+            text-align: left;         
             transition: all 0.3s ease; 
         }
         .semana:hover {
-            transform: scale(1.03); /* Crece un 3% (un zoom sutil se ve mejor en tarjetas grandes) */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* La sombra se vuelve más profunda al "elevarse" */
+            transform: scale(1.03); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
         }
         .pdf-container {
             margin-top: 15px;
             border: 2px solid #ddd;
             border-radius: 8px;
-            overflow: hidden; /* Esto asegura que el PDF respete las esquinas redondeadas */
+            overflow: hidden; 
         }
     </style>
 </head>
@@ -72,70 +74,69 @@
     <header>
         <h1>Bitácora Segunda y Tercera Unidad</h1>
     </header>
+
     <main>
         <h4>Contenido de la página WEB</h4>
-        <main>
-    <div class="semana">
-        <h3>Semana 1: Introducción</h3>
-        <p>Aprendimos sobre los conceptos basicos de arduino.</p>
-        <div class="semana">
-    <div class="pdf-container">
-        <embed src="recursos/img/IntroducciónArduino.pdf" type="application/pdf" width="100%" height="500px">
-    </div>
-</div>
-    </div>
 
-    <div class="semana 2">
-        <h3>Semana 2:HTML </h3>
-        <p>Hoy aprendí las estructuras de progrmación</p>
-    <div class="semana 2">
-    <h2 style="color: rgb(13, 0, 255);">Semana 2: Práctica de Arduino</h2>
-    <p>En este video se muestra el funcionamiento del LED RGB en color rojo, verde y azul:</p>
-    <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-        <source src="recursos/img/videog.mp4" type="video/mp4">
-    </video>
-</div>
-    </div>
+        <!-- Semana 1 -->
+        <div class="semana">
+            <h3>Semana 1: Introducción</h3>
+            <p>Aprendimos sobre los conceptos básicos de arduino.</p>
+            <div class="pdf-container">
+                <embed src="recursos/img/IntroducciónArduino.pdf" type="application/pdf" width="100%" height="500px">
+            </div>
+        </div>
+
+        <!-- Semana 2 -->
+        <div class="semana">
+            <h3>Semana 2: HTML y Práctica de Arduino</h3>
+            <p>Hoy aprendí las estructuras de programación.</p>
+            <p>En este video se muestra el funcionamiento del LED RGB en color rojo, verde y azul:</p>
+            <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <source src="recursos/img/videog.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Semana 3 -->
         <div class="semana">
             <h2>Semana 3: Práctica con LED RGB Físico</h2>
             <p>Realizamos el montaje físico y la programación en placa de un LED RGB. Configuramos las salidas digitales de nuestro Arduino para alternar de manera continua entre los colores rojo, azul y verde mediante ciclos programados.</p>
-            
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
                     <source src="recursos/Circuito semana 3 (1).mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                 </video>
             </div>
-            
         </div>
+
+        <!-- Semana 4 -->
         <div class="semana">
             <h2>Semana 4: Secuencia de Semáforo Automatizado</h2>
             <p>Diseñamos un circuito de semáforo utilizando tres LEDs independientes (rojo, verde y amarillo) conectados a pines digitales separados. Estructuramos la lógica del código para replicar una secuencia vial controlando los tiempos exactos de encendido.</p>
-            
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
                     <source src="recursos/Circuito Semana 4 (1).mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                 </video>
             </div>
-            
         </div>
-        <!-- Nueva Sección - Semana 5 -->
+
+        <!-- Semana 5 -->
         <div class="semana">
             <h2>Semana 5: Montaje Físico de Semáforo con LEDs Individuales</h2>
-            <p>Pasamos a otra práctica real, implementando el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes (verde, amarillo y rojo) con sus respectivas resistencias para protegerlos, enlazándolos a las salidas digitales del Arduino Uno. Logramos comprobar físicamente la correcta ejecución del código y la transición cíclica de los tiempos de iluminación viales.</p>
-            
+            <p>Pasamos a otra práctica real, implementando el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes (verde, amarillo y rojo) con sus respectivas resistencias para protegerlos, enlazándolos a las salidas digitales del Arduino Uno.</p>
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
                     <source src="recursos/CirSemaforo.mov" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
-             </video>
+                </video>
             </div>
-       
+        </div>
     </main>
+
     <footer>
         <span>@gabycas</span>
-       <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" class="logo-colegio" height="50" width="200">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" class="logo-colegio" height="50" width="200" alt="Logo Colegio">
     </footer>
 </body>
 </html>
