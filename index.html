@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Gabriela Castillo</title>
-    <!-- Asegúrate de que la ruta sea relativa a donde guardas este archivo -->
     <link rel="icon" href="recursos/img/Lcap.png">
     <style>
-        html, body{
+        html, body {
             height: 100%;
             margin: 0;
-            font-family: arial, sans-serif;
+            font-family: Arial, sans-serif;
             color: rgb(13, 0, 255);
         }
-        body{
+        body {
             display: flex;
             flex-direction: column;
             text-align: center;
         }
-        header{
+        header {
             padding: 20px;
             background-color: rgb(236, 223, 207);
         }
-        main{
+        main {
             flex: 1;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
+            width: 90%;
             box-sizing: border-box;
         }
-        footer{
+        footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,7 +38,7 @@
             background-color: beige;
         }
         h1 {
-            color: white; 
+            color: white;
             text-shadow: 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 20px #bc13fe;
         }
         .logo-colegio {
@@ -50,34 +49,41 @@
         }
         .semana {
             background-color: white;
-            border-radius: 15px;      
-            padding: 20px;            
-            margin: 20px 0;           
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            border-left: 5px solid rgb(13, 0, 255); 
-            text-align: left;         
-            transition: all 0.3s ease; 
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid rgb(13, 0, 255);
+            text-align: left;
+            transition: all 0.3s ease;
         }
         .semana:hover {
-            transform: scale(1.03); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         .pdf-container {
             margin-top: 15px;
             border: 2px solid #ddd;
             border-radius: 8px;
-            overflow: hidden; 
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 2px solid pink;
+            display: block;
+            margin: 15px auto;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Bitácora Segunda y Tercera Unidad</h1>
     </header>
 
     <main>
-        <h4>Contenido de la página WEB</h4>
-
         <!-- Semana 1 -->
         <div class="semana">
             <h3>Semana 1: Introducción</h3>
@@ -92,8 +98,9 @@
             <h3>Semana 2: HTML y Práctica de Arduino</h3>
             <p>Hoy aprendí las estructuras de programación.</p>
             <p>En este video se muestra el funcionamiento del LED RGB en color rojo, verde y azul:</p>
-            <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <source src="recursos/img/videog.mp4" type="video/mp4">
+            <video controls>
+                <source src="recursos/videog.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
             </video>
         </div>
 
@@ -101,36 +108,32 @@
         <div class="semana">
             <h2>Semana 3: Práctica con LED RGB Físico</h2>
             <p>Realizamos el montaje físico y la programación en placa de un LED RGB. Configuramos las salidas digitales de nuestro Arduino para alternar de manera continua entre los colores rojo, azul y verde mediante ciclos programados.</p>
-            <div style="text-align: center; margin-top: 15px;">
-                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
-                    <source src="Circuito semana 3 (1).mp44" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
-            </div>
+            <video controls>
+                <!-- CORREGIDO: .mp44 a .mp4 -->
+                <source src="recursos/Circuito_semana_3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
         </div>
 
         <!-- Semana 4 -->
         <div class="semana">
             <h2>Semana 4: Secuencia de Semáforo Automatizado</h2>
-            <p>Diseñamos un circuito de semáforo utilizando tres LEDs independientes (rojo, verde y amarillo) conectados a pines digitales separados. Estructuramos la lógica del código para replicar una secuencia vial controlando los tiempos exactos de encendido.</p>
-            <div style="text-align: center; margin-top: 15px;">
-                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
-                    <source src="Circuito Semana 4 (1).mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
-            </div>
+            <p>Diseñamos un circuito de semáforo utilizando tres LEDs independientes (rojo, verde y amarillo) conectados a pines digitales separados.</p>
+            <video controls>
+                <source src="recursos/Circuito_Semana_4.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
         </div>
 
         <!-- Semana 5 -->
         <div class="semana">
-            <h2>Semana 5: Montaje Físico de Semáforo con LEDs Individuales</h2>
-            <p>Pasamos a otra práctica real, implementando el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes (verde, amarillo y rojo) con sus respectivas resistencias para protegerlos, enlazándolos a las salidas digitales del Arduino Uno.</p>
-            <div style="text-align: center; margin-top: 15px;">
-                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
-                    <source src="CirSemaforo.mov" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
-            </div>
+            <h2>Semana 5: Montaje Físico de Semáforo</h2>
+            <p>Implementamos el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes con sus resistencias.</p>
+            <video controls>
+                <!-- Si tu archivo original es .mov, asegúrate de que el nombre coincida aquí -->
+                <source src="recursos/CirSemaforo.mov" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
         </div>
     </main>
 
@@ -138,5 +141,6 @@
         <span>@gabycas</span>
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" class="logo-colegio" height="50" width="200" alt="Logo Colegio">
     </footer>
+
 </body>
 </html>
